@@ -8,10 +8,10 @@ But preorder and postorder sequences don’t provide enough information to creat
 More than one binary trees can be constructed due to ambiguity.
 
 ```
-     a             a         
-    /               \
-   b                 b 
-  /                   \
- c                     c
- 
+              a             a         
+             /               \
+            b                 b 
+           /                   \
+          c                     c
+ Left Skewed Tree            Right Skewed Tree 
 ```
