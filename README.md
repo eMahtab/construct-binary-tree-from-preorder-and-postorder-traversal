@@ -43,20 +43,20 @@ However we can construct a unique full binary tree using the Preorder and Postor
 
 ![Full Binary Tree](Full-Binary-Tree.png?raw=true "Full Binary Tree")
 
-Preorder  : { 1, **2, 4, 5**, **3, 6, 8, 9, 7** }
+Preorder  :  { 1, `2, 4, 5`, `3, 6, 8, 9, 7` }
 
-Postorder : { **4, 5, 2**, **8, 9, 6, 7, 3**, 1 }
+Postorder :  { `4, 5, 2`, `8, 9, 6, 7, 3`, 1 }
 
 We know that root is the first element in preorder sequence and the last element in postorder sequence. Therefore, the root node is 1. Then we locate the next element in preorder sequence, which must be the left child of the root node. In this case, the left child is 2. 
 
 Now since 2 is root node of the left subtree, all nodes before 2 in the postorder sequence must be present in the left subtree of the root node i.e.  {4, 5, 2}  and all the nodes after 2 (except the last) must be present in right subtree i.e.  {8, 9, 6, 7, 3}
 
-Left Subtree
+**Left Subtree**
 ```
 Preorder  [2, 4, 5]
 Postorder [4, 5, 2]
 ```
-Right Subtree
+**Right Subtree**
 ```
 Preorder  [3, 6, 8, 9, 7]
 Postorder [8, 9, 6, 7, 3]
