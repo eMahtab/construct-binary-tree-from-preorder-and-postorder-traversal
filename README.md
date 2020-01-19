@@ -53,36 +53,36 @@ However we can construct a unique full binary tree using the Preorder and Postor
  */
 class Solution {
     public static TreeNode constructFromPrePost(int[] pre, int[] post) {
-		  int preStart = 0;
-	      int preEnd = pre.length - 1;
-	      int postStart = 0;
-	      int postEnd = post.length - 1;
+	int preStart = 0;
+	int preEnd = pre.length - 1;
+	int postStart = 0;
+	int postEnd = post.length - 1;
 	      
-	      Map<Integer, Integer> map = new HashMap<>();
-	      for(int i = 0; i < post.length; i++) {
-	    	  map.put(post[i], i);
-	      }
-	      
-	      return construct(pre, preStart, preEnd, post, postStart, postEnd, map);
+	Map<Integer, Integer> map = new HashMap<>();
+	for(int i = 0; i < post.length; i++) {
+	    map.put(post[i], i);
 	}
+	      
+       return construct(pre, preStart, preEnd, post, postStart, postEnd, map);
+     }
 	
-	private static TreeNode construct(int[] pre, int preStart, int preEnd, 
-			int[] post, int postStart, int postEnd, Map<Integer, Integer> map) {
-		if(preStart > preEnd || postStart > postEnd)
-			return null;
+     private static TreeNode construct(int[] pre, int preStart, int preEnd, 
+			               int[] post, int postStart, int postEnd, Map<Integer, Integer> map) {
+	 if(preStart > preEnd || postStart > postEnd)
+	      return null;
 		
-		TreeNode node = new TreeNode(pre[preStart]);
-		if(preStart+1 <= preEnd) {
-			int rootIndex = map.get(pre[preStart + 1]);
-			int leftSubtreeSize = rootIndex - postStart;
-			node.left = construct(pre, preStart + 1, preStart+1+leftSubtreeSize, 
-					                post, postStart, postStart+leftSubtreeSize, map);
-			node.right = construct(pre, preStart+1+leftSubtreeSize+1, preEnd, 
-									post, rootIndex+1, postEnd - 1, map);
-		}
+	 TreeNode node = new TreeNode(pre[preStart]);
+	 if(preStart+1 <= preEnd) {
+	      int rootIndex = map.get(pre[preStart + 1]);
+	      int leftSubtreeSize = rootIndex - postStart;
+	      node.left = construct(pre, preStart + 1, preStart+1+leftSubtreeSize, 
+				       post, postStart, postStart+leftSubtreeSize, map);
+	      node.right = construct(pre, preStart+1+leftSubtreeSize+1, preEnd, 
+				       post, rootIndex+1, postEnd - 1, map);
+	  }
 		
-		return node;
-	}
+	return node;
+     }
 }
 ```
 
