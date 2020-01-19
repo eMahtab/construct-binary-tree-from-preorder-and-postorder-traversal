@@ -41,6 +41,8 @@ However we can construct a unique full binary tree using the Preorder and Postor
 
 ## Approach :
 
+![Full Binary Tree](Full-Binary-Tree.png?raw=true "Full Binary Tree")
+
 Preorder  : { 1, **2, 4, 5**, **3, 6, 8, 9, 7** }
 
 Postorder : { **4, 5, 2**, **8, 9, 6, 7, 3**, 1 }
