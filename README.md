@@ -38,3 +38,8 @@ Postorder [c, b, a]
 ```
 Therefore, its not possible to construct a unique binary tree with the help of preorder and postoder sequences. 
 However we can construct a unique full binary tree using the Preorder and Postorder traversal.
+
+
+
+## References :
+https://www.techiedelight.com/construct-full-binary-tree-from-preorder-postorder-sequence/
