@@ -17,5 +17,9 @@ More than one binary trees can be constructed due to ambiguity.
 ```
 For both left skewed tree and right skewed tree, the preorder and postorder traversal results in same sequence.
 
+```
 Preorder  [a, b, c]
 Postorder [c, b, a]
+```
+Therefore, its not possible to construct a unique binary tree with the help of preorder and postoder sequences. 
+However we can construct a unique full binary tree using the Preorder and Postorder traversal.
