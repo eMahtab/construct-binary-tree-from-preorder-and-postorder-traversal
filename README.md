@@ -16,5 +16,6 @@ More than one binary trees can be constructed due to ambiguity.
  Left Skewed Tree            Right Skewed Tree 
 ```
 For both left skewed tree and right skewed tree, the preorder and postorder traversal results in same sequence.
+
 Preorder  [a, b, c]
 Postorder [c, b, a]
